@@ -1,0 +1,23 @@
+package com.busayo.sms2.service.impl;
+
+import com.busayo.sms2.entity.Student;
+import com.busayo.sms2.repository.StudentRepository;
+import com.busayo.sms2.service.StudentService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+
+    private StudentRepository studentRepository;
+
+    public StudentServiceImpl(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
+    @Override
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
+}
