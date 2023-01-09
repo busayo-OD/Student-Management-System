@@ -55,6 +55,7 @@ public class Student {
     }
 
     public Student(String firstName, String lastName, String email) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
