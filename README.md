@@ -9,4 +9,4 @@ This is a simple student management system web application where users can add, 
 - Spring Data JPA (Hibernate)
 - MySQL
 - Thymeleaf
-- Intellij
+- IntelliJ
