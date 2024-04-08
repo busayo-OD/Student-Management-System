@@ -25,6 +25,8 @@ public class Course {
 
     private String description;
 
+    private int grade;
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_on", updatable = false, nullable = false)
