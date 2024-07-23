@@ -19,4 +19,4 @@ The Student Management System is a component of a larger school management syste
 - Java Spring Boot
 - Spring Data JPA
 - Spring Security
-- MySQL
+- PostgreSQL
