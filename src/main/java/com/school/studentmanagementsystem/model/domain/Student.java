@@ -31,6 +31,11 @@ public class Student {
 
     private String address;
 
+    private String email;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
     @Column(name = "contact_information")
     private String contactInformation;
 

@@ -3,6 +3,7 @@ package com.school.studentmanagementsystem.controller;
 import com.school.studentmanagementsystem.model.dto.AuthenticationRequestDTO;
 import com.school.studentmanagementsystem.model.dto.AuthenticationResponse;
 import com.school.studentmanagementsystem.model.dto.RegisterRequestDTO;
+import com.school.studentmanagementsystem.service.AuthenticationService;
 import com.school.studentmanagementsystem.service.impl.AuthenticationServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AuthenticationController {
 
-    private final AuthenticationServiceImpl authenticationService;
+    private final AuthenticationService authenticationService;
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequestDTO request){
