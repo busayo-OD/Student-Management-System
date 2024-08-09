@@ -21,10 +21,10 @@ public class Student {
     private String studentId;
 
     @Column(name = "first_name")
-    private String firstName;
+    private String firstname;
 
     @Column(name = "last_name")
-    private String lastName;
+    private String lastname;
 
     @Column(name = "date_of_birth")
     private String dateOfBirth;
@@ -44,6 +44,10 @@ public class Student {
 
     @Column(name = "enrollment_status")
     private String enrollmentStatus;
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)

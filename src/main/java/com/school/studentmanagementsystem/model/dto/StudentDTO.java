@@ -7,14 +7,14 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterStudentDTO {
+public class StudentDTO {
+    private String studentId;
     private String firstname;
     private String lastname;
-    private String email;
-    private String phoneNumber;
-    private String password;
     private String dateOfBirth;
     private String address;
+    private String email;
+    private String phoneNumber;
     private String contactInformation;
     private String emergencyContact;
 }
