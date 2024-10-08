@@ -127,7 +127,7 @@ class StudentServiceImplTest {
         });
 
         assertEquals("Student role not found", exception.getMessage());
-        verify(userRepository, never()).save(any(User.class));  // ensure user is not saved if role fails
+        verify(userRepository, never()).save(any(User.class));
     }
 
     @Test

@@ -20,4 +20,26 @@ public class GlobalExceptionHandler {
         errors.put("code", ex.getCode().toString());
         return errors;
     }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(UserNotFoundException.class)
+    public Object notFound(UserNotFoundException ex) {
+        final Map<String, Object> errors = new HashMap<>();
+        errors.put("entityName", UserNotFoundException.ENTITY_NAME);
+        errors.put("message", ex.getMessage());
+        ex.setCode(HttpStatus.NOT_FOUND.value());
+        errors.put("code", ex.getCode().toString());
+        return errors;
+    }
+
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler(UsernameAlreadyExistsException.class)
+    public Object exists(UsernameAlreadyExistsException ex) {
+        final Map<String, Object> errors = new HashMap<String, Object>();
+        errors.put("entityName", UsernameAlreadyExistsException.ENTITY_NAME);
+        errors.put("message", ex.getMessage());
+        ex.setCode(HttpStatus.CONFLICT.value());
+        errors.put("code", ex.getCode().toString());
+        return errors;
+    }
 }

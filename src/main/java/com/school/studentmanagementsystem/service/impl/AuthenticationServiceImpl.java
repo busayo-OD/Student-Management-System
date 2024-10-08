@@ -7,7 +7,6 @@ import com.school.studentmanagementsystem.model.domain.User;
 import com.school.studentmanagementsystem.model.dto.AuthenticationRequestDTO;
 import com.school.studentmanagementsystem.model.dto.AuthenticationResponse;
 import com.school.studentmanagementsystem.model.dto.RegisterRequestDTO;
-import com.school.studentmanagementsystem.model.dto.UserDTO;
 import com.school.studentmanagementsystem.repository.RoleRepository;
 import com.school.studentmanagementsystem.repository.UserRepository;
 import com.school.studentmanagementsystem.security.JwtService;
@@ -15,7 +14,6 @@ import com.school.studentmanagementsystem.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
