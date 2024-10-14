@@ -16,7 +16,8 @@ The Student Management System is a component of a larger school management syste
 
 ## Technologies Used
 
-- Java Spring Boot
+- Java 17
+- Spring Boot
 - Spring Data JPA
 - Spring Security
 - PostgreSQL
