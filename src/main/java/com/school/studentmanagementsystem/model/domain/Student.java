@@ -53,4 +53,13 @@ public class Student {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_on", updatable = false, nullable = false)
     private Date createdOn;
+
+    public Student(String studentId, String firstname, String lastname) {
+        this.studentId = studentId;
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public Student() {
+    }
 }

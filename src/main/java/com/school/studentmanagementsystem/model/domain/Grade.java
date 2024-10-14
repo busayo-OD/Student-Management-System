@@ -30,9 +30,26 @@ public class Grade {
     @Enumerated(EnumType.STRING)
     private AssessmentType assessmentType;
 
+    private Double score;
+
+    private String remarks;
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "assessment_date", updatable = false, nullable = false)
     private Date assessmentDate;
+
+    public Grade(Student student, Course course, AssessmentType assessmentType, Double score, String remarks) {
+        this.student = student;
+        this.course = course;
+        this.assessmentType = assessmentType;
+        this.score = score;
+        this.remarks = remarks;
+    }
+
+    public Grade() {
+
+    }
+
 
 }

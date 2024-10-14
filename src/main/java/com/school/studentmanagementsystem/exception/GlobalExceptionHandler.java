@@ -32,6 +32,17 @@ public class GlobalExceptionHandler {
         return errors;
     }
 
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(GradeNotFoundException.class)
+    public Object notFound(GradeNotFoundException ex) {
+        final Map<String, Object> errors = new HashMap<>();
+        errors.put("entityName", GradeNotFoundException.ENTITY_NAME);
+        errors.put("message", ex.getMessage());
+        ex.setCode(HttpStatus.NOT_FOUND.value());
+        errors.put("code", ex.getCode().toString());
+        return errors;
+    }
+
     @ResponseStatus(HttpStatus.CONFLICT)
     @ExceptionHandler(UsernameAlreadyExistsException.class)
     public Object exists(UsernameAlreadyExistsException ex) {
@@ -39,6 +50,17 @@ public class GlobalExceptionHandler {
         errors.put("entityName", UsernameAlreadyExistsException.ENTITY_NAME);
         errors.put("message", ex.getMessage());
         ex.setCode(HttpStatus.CONFLICT.value());
+        errors.put("code", ex.getCode().toString());
+        return errors;
+    }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(CourseNotFoundException.class)
+    public Object notFound(CourseNotFoundException ex) {
+        final Map<String, Object> errors = new HashMap<>();
+        errors.put("entityName", CourseNotFoundException.ENTITY_NAME);
+        errors.put("message", ex.getMessage());
+        ex.setCode(HttpStatus.NOT_FOUND.value());
         errors.put("code", ex.getCode().toString());
         return errors;
     }

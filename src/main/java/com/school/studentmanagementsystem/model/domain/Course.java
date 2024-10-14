@@ -31,4 +31,13 @@ public class Course {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_on", updatable = false, nullable = false)
     private Date createdOn;
+
+    public Course(Long id, String courseName, String courseCode) {
+        this.id = id;
+        this.courseName = courseName;
+        this.courseCode = courseCode;
+    }
+
+    public Course() {
+    }
 }
